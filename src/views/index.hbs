@@ -1,0 +1,23 @@
+
+  <form>
+    <label for="dni">DNI: </label><input type="number" name="dni" required/>
+    <label for="apellido">Nombre: </label><input type="text" name="apellido" required/>
+    <input type="submit" value="Registrar">
+  </form>
+
+<script type="module">
+    const url = "http://localhost:3000/registrar";
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData =Object.fromEntries( new FormData(form));
+        console.log(formData);
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+    })
+</script>

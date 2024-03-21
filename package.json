@@ -1,0 +1,19 @@
+{
+  "name": "pruebatecnicadomo",
+  "version": "1.0.0",
+  "description": "\"prueba tecnica de DOMO para backend\"",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "express": "^4.19.0",
+    "express-handlebars": "^7.1.2",
+    "handlebars": "^4.7.8"
+  }
+}
